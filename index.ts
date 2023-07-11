@@ -1,7 +1,10 @@
 import express, { Request, Response } from 'express';
+import cors from 'cors';
 
 const app = express();
 const port = 5000;
+
+app.use(cors());
 
 const data = [
     {
@@ -10,7 +13,6 @@ const data = [
       type: "default",
       dateCreated: "Jan 1, 2023",
       status: "active",
-      roleUsers: ["one", "two", "three"],
     },
     {
       id: 2,
@@ -18,7 +20,6 @@ const data = [
       type: "default",
       dateCreated: "Feb 1, 2023",
       status: "active",
-      roleUsers: ["one", "two", "three"],
     },
     {
       id: 3,
@@ -26,7 +27,6 @@ const data = [
       type: "default",
       dateCreated: "Jan 1, 2023",
       status: "active",
-      roleUsers: ["one", "two", "three"],
     },
     {
       id: 4,
@@ -34,7 +34,6 @@ const data = [
       type: "custom",
       dateCreated: "Jan 1, 2023",
       status: "active",
-      roleUsers: ["one", "two", "three"],
     },
     {
       id: 5,
@@ -42,7 +41,6 @@ const data = [
       type: "custom",
       dateCreated: "Jan 1, 2023",
       status: "active",
-      roleUsers: ["one", "two", "three"],
     },
     {
       id: 6,
@@ -50,7 +48,6 @@ const data = [
       type: "system-custom",
       dateCreated: "Jan 1, 2023",
       status: "in active",
-      roleUsers: ["one", "two", "three"],
     },
     {
       id: 7,
@@ -58,7 +55,6 @@ const data = [
       type: "system-custom",
       dateCreated: "Jan 1, 2023",
       status: "in active",
-      roleUsers: ["one", "two", "three"],
     },
   ];
 
